@@ -9,10 +9,8 @@ const OUTPUTFILE = path.join(__dirname, `${uniqueid}.json`);
 csvtojson().fromFile(INPUTFILE).then((jsonres) => {
 	fs.writeFileSync(OUTPUTFILE, JSON.stringify(jsonres), (error) => {
 		if (error) {
-			console.log(error.message);
-			return false;
+			return console.log(error.message);
 		}
 	});
+	console.log(`File correctly converted from csv (${INPUTFILE}) to json (${OUTPUTFILE})`);
 });
-
-console.log(`File correctly converted from csv (${INPUTFILE}) to json (${OUTPUTFILE})`);

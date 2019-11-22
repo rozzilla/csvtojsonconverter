@@ -5,6 +5,8 @@ To run this program you need just these commands:
 
 `git clone https://github.com/rozzilla/csvtojsonconverter.git`
 
+`cd csvtojsonconverter`
+
 `npm install`
 
 `node index.js`
